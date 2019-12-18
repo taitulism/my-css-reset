@@ -50,8 +50,32 @@ a, a:active, a:visited {
     color: #00e;
 }
 
-button {
+button, input[type="reset"], input[type="submit"] {
     letter-spacing: 0.04em;
     padding: 0.08em 1.1em;
+    font-size: 1em;
     /* font-weight: bold; */
+}
+
+input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+    width: 1.1em;
+    height: 1.1em;
+}
+
+input[type="checkbox"] {
+    margin: 1px 0 0 1px; /* chrome has some weird asymmetry */
+    vertical-align: middle;
+    width: 1.12em;
+    height: 1.12em;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 0 0.23em;
+    font-size: 1em;
+}
+
+select {
+    font-size: 1em;
 }
