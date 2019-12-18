@@ -1,0 +1,45 @@
+html {
+    font-size: 14px;
+    font-family: sans-serif;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+/* Text */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.1rem;
+}
+h2 {
+    font-size: 1.7rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+h4 {
+    font-size: 1.3rem;
+}
+h5 {
+    font-size: 1.14rem;
+}
+h6 {
+    font-size: 1.05rem;
+}
+
+p {
+    margin: 0.9rem 0;
+}
+
