@@ -50,3 +50,8 @@ a, a:active, a:visited {
     color: #00e;
 }
 
+button {
+    letter-spacing: 0.04em;
+    padding: 0.08em 1.1em;
+    /* font-weight: bold; */
+}
