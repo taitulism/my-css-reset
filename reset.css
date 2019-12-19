@@ -73,6 +73,10 @@ nav ul, nav ol {
 /* ───────────────────────────────/
 │   Interactables & Form Fields   │
 /─────────────────────────────── */
+a {
+    letter-spacing: 0.023em;
+}
+
 a, a:active, a:visited {
     color: #00e;
 }
