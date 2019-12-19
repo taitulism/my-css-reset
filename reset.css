@@ -14,9 +14,9 @@ body {
     line-height: 1.4;
 }
 
-
-
-/* Text */
+/* ────────/
+│   Text   │
+/──────── */
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     letter-spacing: 0.035rem;
@@ -46,6 +46,28 @@ p {
     letter-spacing: 0.023em;
 }
 
+/* ─────────/
+│   Lists   │
+/───────── */
+ul, ol, dl {
+    margin: 0 1em 1em;
+    padding: 0 1em;
+}
+
+dd {
+    margin: 0 2em;
+}
+
+nav ul, nav ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ─────────────────/
+│   Interactables   │
+/───────────────── */
 a, a:active, a:visited {
     color: #00e;
 }
@@ -95,20 +117,6 @@ textarea {
     cursor: pointer;
 }
 
-ul, ol, dl {
-    margin: 0 1em 1em;
-    padding: 0 1em;
-}
-
-dd {
-    margin: 0 2em;
-}
-
-nav ul, nav ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
 
 /*──── Classes ─────────────────────────────────────────────────────────────*/
