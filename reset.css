@@ -42,8 +42,8 @@ h6 {
 }
 
 p {
-    margin: 0.9rem 0;
-    letter-spacing: 0.025rem;
+    margin: 0 0 1em;
+    letter-spacing: 0.025em;
 }
 
 a, a:active, a:visited {
@@ -89,11 +89,13 @@ textarea {
     padding: 0.2em 0.4em;
     line-height: 1.4;
     vertical-align: text-top;
+    min-height: 5.2em;
+    min-width: 20em;
     cursor: pointer;
 }
 
 ul, ol, dl {
-    margin: 0 1em;
+    margin: 0 1em 1em;
     padding: 0 1em;
 }
 
