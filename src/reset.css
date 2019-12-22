@@ -100,18 +100,9 @@ summary {
 }
 
 
-/* ─────────/
-│   Table   │
-/───────── */
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/* ─────────/
-│   Lists   │
-/───────── */
+/* ──────────────────/
+│   Lists & tables   │
+/────────────────── */
 ul, ol, dl {
     margin: 0 0 1em;
     padding: 0 1em;
@@ -128,6 +119,11 @@ ul ul, ul ol, ol ol, ol ul {
 nav ul, nav ol {
     list-style-type: none;
     padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -187,22 +183,4 @@ textarea {
     min-height: 5.2em;
     min-width: 20em;
     font: inherit;
-}
-
-
-
-/*──── Classes ─────────────────────────────────────────────────────────────*/
-
-.f-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.f-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.f-cell {
-    flex: 1 1;
 }
