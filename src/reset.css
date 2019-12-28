@@ -1,6 +1,6 @@
 html {
     font-size: 14px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -9,8 +9,8 @@ html {
 }
 
 body {
-    line-height: 1.4;
-    letter-spacing: 0.02em;
+    line-height: 1;
+    letter-spacing: 0.01em;
 }
 
 body, h1, h2, h3, h4, h5, h6,
@@ -24,10 +24,14 @@ button, select, textarea {
     font-size: 1em;
 }
 
-input[type="radio"], input[type="checkbox"],
-input[type="reset"], input[type="submit"],
-button, select, textarea, summary {
+input, button, select, textarea, summary {
     cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    cursor: text;
 }
 
 
@@ -35,7 +39,7 @@ button, select, textarea, summary {
 │   Text   │
 /──────── */
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 0.035rem;
+    letter-spacing: 0.015rem;
 }
 
 h1 { font-size: 2.1rem; }
@@ -142,17 +146,10 @@ fieldset {
 fieldset, input, select, textarea {
     border: 1px solid #a9a9a9;
     border-radius: 2px;
-    letter-spacing: 0.02em;
-}
-
-input:hover, select:hover, textarea:hover {
-    border: 1px solid #777777;
 }
 
 button, input[type="reset"], input[type="submit"] {
-    letter-spacing: 0.03em;
     padding: 0.07em 1.1em 0.09em;
-    /* font-weight: bold; */
 }
 
 input[type="radio"] {
@@ -178,7 +175,7 @@ select {
 }
 
 textarea {
-    padding: 0.2em 0.4em;
+    padding: 0.3em 0.5em;
     vertical-align: text-top;
     min-height: 5.2em;
     min-width: 20em;
