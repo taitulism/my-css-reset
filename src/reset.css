@@ -79,6 +79,10 @@ code {
     border-radius: 2px;
 }
 
+pre {
+    tab-size: 4;
+}
+
 kbd {
     background-color: #eee;
     border-radius: 3px;
