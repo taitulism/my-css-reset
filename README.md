@@ -1,10 +1,6 @@
 css-reset
 =========
 
-```js
-import 'reset.css';
-```
-
 ```html
-<link rel="stylesheet" href="./dist/reset.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/css-reset@latest/dist/reset.min.css" />
 ```
