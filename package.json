@@ -1,6 +1,6 @@
 {
 	"name": "css-reset",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Yet another css reset.",
 	"main": "./dist/reset.min.css",
 	"dependencies": {
