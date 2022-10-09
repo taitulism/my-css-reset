@@ -32,20 +32,20 @@ input, select, textarea, button /* , summary */ {
     font: inherit;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
+input[type=text]:focus,
+input[type=number]:focus,
 textarea:focus {
     cursor: text;
 }
 
-input[type="radio"] {
+input[type=radio] {
     margin: 0;
     vertical-align: text-top;
     width: 1.1em;
     height: 1.1em;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
     margin: 1px 0 0 1px;
     vertical-align: text-top;
     width: 1.12em;
