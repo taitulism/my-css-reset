@@ -32,16 +32,21 @@ html {
 /* needs more research */
 input, select, textarea, button /* , summary */ {
     border: 0 none;
-    cursor: pointer;
     font: inherit;
+    /* Thinkabout:
+    cursor: pointer;
+
+    Relevant for input[txt&num] & textarea (not button & select)
+    If setting the cursor: pointer - add:
+
+        input[type=text]:focus,
+        input[type=number]:focus,
+        textarea:focus {
+            cursor: text; 
+        }
+    */
 }
 
-/* needs more research */
-input[type=text]:focus,
-input[type=number]:focus,
-textarea:focus {
-    cursor: text;
-}
 
 /* needs more research */
 input[type=radio] {
@@ -61,6 +66,6 @@ input[type=checkbox] {
 
 /* MAYBE */
 textarea {
-    padding: 0.4em 0.5em;
+    padding: 0.4em 0.5em; /* Opinion */
     vertical-align: text-top;
 }
