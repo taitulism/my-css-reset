@@ -2,43 +2,48 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+}
+
+/* needs more research */
+ul {
+    list-style-type: none;
+}
+
+/* MAYBE */
 body, h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+/* MAYBE */
 html {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    min-height: 100vh;
-}
-
-ul {
-    list-style-type: none;
-}
 
 
 /* ───────────────────────────────/
 │   Interactables & Form Fields   │
 /─────────────────────────────── */
-a, a:active, a:visited {
-    color: #0e0eff;
-}
 
+
+/* needs more research */
 input, select, textarea, button /* , summary */ {
     border: 0 none;
     cursor: pointer;
     font: inherit;
 }
 
+/* needs more research */
 input[type=text]:focus,
 input[type=number]:focus,
 textarea:focus {
     cursor: text;
 }
 
+/* needs more research */
 input[type=radio] {
     margin: 0;
     vertical-align: text-top;
@@ -46,6 +51,7 @@ input[type=radio] {
     height: 1.1em;
 }
 
+/* needs more research */
 input[type=checkbox] {
     margin: 1px 0 0 1px;
     vertical-align: text-top;
@@ -53,11 +59,8 @@ input[type=checkbox] {
     height: 1.12em;
 }
 
+/* MAYBE */
 textarea {
     padding: 0.4em 0.5em;
     vertical-align: text-top;
-}
-
-:focus {
-    outline: 0 none;
 }

@@ -1,6 +1,11 @@
-/* body, */ h1, h2, h3, h4, h5, h6,
+/* merge selectors with base (has: body, h1, h2, h3, h4, h5, h6) */
 figure, pre {
     margin: 0;
+}
+
+/* Define in app */
+:focus {
+    outline: 0 none;
 }
 
 
@@ -101,8 +106,10 @@ summary {
 /* ───────────────────────────────/
 │   Interactables & Form Fields   │
 /─────────────────────────────── */
+
+/* Define in app */
 a, a:active, a:visited {
-    color: #00e;
+    color: #0e0eff;
 }
 
 fieldset {
