@@ -10,7 +10,7 @@ html {
 
 body {
     min-height: 100vh;
-    /* line-height: 1.4; */
+    line-height: 1.4;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, fieldset, blockquote {
