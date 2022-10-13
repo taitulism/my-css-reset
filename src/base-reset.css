@@ -6,8 +6,25 @@ body {
     min-height: 100vh;
 }
 
-/* needs more research */
+/* 
+Accessibility Issue (Safari):
+
+Removing the bullets causes some accessibility issues with Safari browser.
+The list looses its "list" semantics.
+This could be fixed by adding `role="list"` attribute in the HTML.
+To address this issue, change the selector to:
+
+  ul[role=list]
+
+and start using role="list" in lists (currently only needed with unordered lists).
+
+Read more:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/list-style#accessibility_concerns
+- https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+
+*/
 ul {
+    padding: 0;
     list-style-type: none;
 }
 
