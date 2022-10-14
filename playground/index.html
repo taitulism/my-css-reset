@@ -9,110 +9,25 @@
         /*! sweet-dom v0.0.1 | MIT License | © Taitu Lizenbaum 2022 | https://github.com/taitulism/sweet-dom.git */
         const sweetDom=function(e){"use strict";const t={once:!0},n=(e,t,n,r)=>(e.addEventListener(t,n,r),()=>e.removeEventListener(t,n,r)),r=e=>"string"==typeof e?document.querySelector(e):e;return e.$=(e,t=document)=>t.querySelector(e),e.$$=(e,t=document)=>t.querySelectorAll(e),e.bindEvent=n,e.bindEventOnce=(e,r,s,o)=>{const c="boolean"==typeof o?{...t,capture:o}:o?{...o,...t}:t;return n(e,r,s,c)},e.createElm=(e,...t)=>{const{tag:n,id:r,classnames:s}=(e=>{const[t,...n]=e.split("."),[r,s]=t.split("#");return{tag:r||"div",id:s||void 0,classnames:n||void 0}})(e),o=document.createElement(n);return r&&(o.id=r),s?.length&&o.classList.add(...s),t.length&&o.append(...t),o},e.createFrag=(...e)=>{const t=document.createDocumentFragment();return e.length&&t.append(...e),t},e.insert=e=>({before:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n)},after:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n.nextSibling)}}),e.setAttributes=(e,t)=>{for(const[n,r]of Object.entries(t))e.setAttribute(n,r)},e.setStyle=(e,t)=>{Object.assign(e.style,t)},e}({});
     </script>
+    <script src="./playground.js"></script>
     <link rel="stylesheet" href="../src/base-reset.css" />
     <!-- <link rel="stylesheet" href="../dist/reset.min.css" /> -->
+    <link rel="stylesheet" href="./playground.css" />
     <style>
         fieldset, input, select, textarea {
             background-color: #f3f3f3;
         }
-
-        #topic-navigation {
-            background-color: #3a3434;
-            height: 50px;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-btn {
-            color: #dadada;
-            background-color: unset;
-            font-size: 1.3rem;
-            width: 100px;
-            border-right: 1px solid gray;
-        }
-
-        .nav-btn.selected {
-            color: white;
-            text-decoration: underline;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
-<script>
-    // Utils
-    const {$, createElm, bindEvent} = sweetDom;
-    const showElm = (elm) => elm.style.display = 'block';
-    const hideElm = (elm) => elm.style.display = 'none';
-    const capitalizeFirstLetter = (str) => {
-        const upperFirst = str[0].toUpperCase();
-        return upperFirst + str.substr(1);
-    };
-
-    let navBar;
-    
-    const topicElems = {};
-    const topicList = [
-        'article',
-        'form',
-        'list',
-        'others',
-    ];
-
-    function init () {
-        navBar = $('#topic-navigation');
-
-        topicList.forEach((topic, i) => {
-            // Elements
-            const btnText = capitalizeFirstLetter(topic);
-            const navBtn = createElm('button.nav-btn', btnText);
-            const topicElm = $(`#${topic}`);
-            
-            // Keep References
-            topicElems[topic] = [navBtn, topicElm];
-
-            // Initial Visibility
-            if (i === 0) {
-                showElm(topicElm);
-                navBtn.classList.add('selected');
-            }
-            else {
-                hideElm(topicElm);
-                navBtn.classList.remove('selected');
-            }
-            
-            // Bind Click
-            bindEvent(navBtn, 'click', () => switchTo(topic));
-
-            // Append to DOM
-            navBar.append(navBtn);
-        }, topicElems);
-    }
-
-    function switchTo (wantedTopic) {
-        topicList.forEach((topic) => {
-            const topicNavBtn = topicElems[topic][0];
-            const topicContainer = topicElems[topic][1];
-
-            if (topic === wantedTopic) {
-                showElm(topicContainer);
-                topicNavBtn.classList.add('selected');
-            }
-            else {
-                hideElm(topicContainer);
-                topicNavBtn.classList.remove('selected');
-            }
-        });
-    }
-</script>
-<div id="super-container" class="f-col">
+<div id="super-container">
     <nav id="topic-navigation"></nav>
     <main id="topic-content">
 
 
-        <div id="article" style="display: none;">
+        <div id="article">
             <h1>Title h1</h1>
-            <div class="f-cell">
+            <div>
                 <figure>
                     <img src="./img.jpg" title="img" width="100%" />
                     <figcaption>An image of.</figcaption>
@@ -146,9 +61,9 @@
         </div>
 
 
-        <div id="form" style="display: none;">
-            <div class="f-row">
-                <div id="form-container" class="f-col f-cell">
+        <div id="form">
+            <div>
+                <div id="form-container">
                     <form onsubmit="return false">
                         <div>
                             <label>Age</label>
@@ -196,8 +111,8 @@
         </div>
 
 
-        <div id="list" style="display: none;">
-            <div class="f-row">
+        <div id="list">
+            <div>
                 <div>
                     <dl>
                         <dt>AAA</dt>
@@ -208,7 +123,7 @@
                         <dd>Suspendisse accumsan imperdiet dignissim</dd>
                     </dl>
                 </div>
-                <div class="f-cell">
+                <div>
                     <h4>List h4</h4>
                     <ul>
                         <li>AAA</li>
@@ -225,9 +140,9 @@
         </div>
 
 
-        <div id="others" style="display: none;">
+        <div id="others">
             <nav>
-                <ul class="f-row">
+                <ul>
                     <li><a href="#">Abc</a></li>
                     <li><a href="#">Defghijk</a></li>
                     <li><a href="#">Lmn opq</a></li>
@@ -235,8 +150,8 @@
                 </ul>
             </nav>
             <div>
-                <div id="titles" class="f-cell" style="text-align: center;">
-                    <hgroup class="f-cell">
+                <div id="titles" style="text-align: center;">
+                    <hgroup>
                         <h1>Title h1</h1>
                         <h2>Title h2</h2>
                         <h3>Title h3</h3>
@@ -244,7 +159,7 @@
                         <h5>Title h5</h5>
                         <h6>Title h6</h6>
                     </hgroup>
-                    <hgroup class="f-cell">
+                    <hgroup>
                         <h5>Title h5</h5>
                         <h4>Title h4</h4>
                         <h3>Title h3</h3>
@@ -252,7 +167,7 @@
                         <h1>Title h1</h1>
                     </hgroup>
                 </div>
-                <div class="f-cell">
+                <div>
                     <details>
                         <summary>Click for details</summary>
                         Something small enough to escape casual notice.
