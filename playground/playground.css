@@ -5,11 +5,19 @@
     align-items: center;
 }
 
+#form-inner-wrapper {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
 .nav-btn {
     color: #dadada;
-    background-color: unset;
     font-size: 1.3rem;
     width: 100px;
+    border: 0 none;
     border-right: 1px solid gray;
 }
 

@@ -13,11 +13,6 @@
     <link rel="stylesheet" href="../src/base-reset.css" />
     <!-- <link rel="stylesheet" href="../dist/reset.min.css" /> -->
     <link rel="stylesheet" href="./playground.css" />
-    <style>
-        fieldset, input, select, textarea {
-            background-color: #f3f3f3;
-        }
-    </style>
 </head>
 <body>
 <div id="super-container">
@@ -46,6 +41,12 @@
                     Morbi commodo neque et nunc dictum maximus. In feugiat nulla vitae arcu pulvinar sagittis.
                     Suspendisse tempus consequat feugiat. Suspendisse accumsan imperdiet dignissim
                 </p>
+                <div>
+                    <details>
+                        <summary>Click for details</summary>
+                        Something small enough to escape casual notice.
+                    </details>
+                </div>
                 <p>In mauris erat, pellente istique senectus et netus et malesuada fames ac turpis egestas.
                     Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus.
                     Cras ut risus vehicula, placerat nulla ac, feugiat augue. <mark>Mauris</mark> orci augue, consectetur sed nibh eu, ullamcorper auctor urna.
@@ -101,23 +102,38 @@
                     Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec enim eget pharetra. Proin maximus felis id odio.
                 </p>
             </div>
+            <div id="titles" style="text-align: center;">
+                <hgroup>
+                    <h1>Title h1</h1>
+                    <h2>Title h2</h2>
+                    <h3>Title h3</h3>
+                    <h4>Title h4</h4>
+                    <h5>Title h5</h5>
+                    <h6>Title h6</h6>
+                </hgroup>
+                <hgroup>
+                    <h5>Title h5</h5>
+                    <h4>Title h4</h4>
+                    <h3>Title h3</h3>
+                    <h2>Title h2</h2>
+                    <h1>Title h1</h1>
+                </hgroup>
+            </div>
         </div>
 
 
         <div id="form">
-            <div>
+            <div id="form-inner-wrapper">
                 <div id="form-container">
                     <form onsubmit="return false">
-                        <div>
-                            <label>Age</label>
-                            <input type="number" />
-                        </div>
-                        <br />
                         <div>
                             <label>Name</label>
                             <input type="text" />
                         </div>
-                        <br />
+                        <div>
+                            <label>Age</label>
+                            <input type="number" />
+                        </div>
                         <div>
                             <label>Select Type</label>
                             <select name="select">
@@ -129,24 +145,29 @@
                         <div>
                             <fieldset>
                                 <legend>Gender</legend>
-                                <input type="radio" name="gender" />
-                                <label>Male</label>
+                                <label>
+                                    <input type="radio" name="gender" />
+                                    Male
+                                </label>
                                 <br />
-                                <input type="radio" name="gender" />
-                                <label>Female</label>
+                                <input id="gender-female" type="radio" name="gender" />
+                                <label for="gender-female">Female</label>
                             </fieldset>
                         </div>
                         <div>
-                            <input type="checkbox" />
-                            <label>Sababa?</label>
+                            <input id="sababa" type="checkbox" />
+                            <label for="sababa">Sababa?</label>
                         </div>
                         <div>
-                            <label>Description</label>
-                            <textarea></textarea>
+                            <label>
+                                Description <br />
+                                <textarea id="description" cols="60" rows="10"></textarea>
+                            </label>
                         </div>
                         <div>
                             <input type="reset" />
                             <input type="submit" />
+                            <button>Click</button>
                         </div>
                     </form>
                 </div>
@@ -192,31 +213,6 @@
                     <li><a href="#">rstuvwxyz</a></li>
                 </ul>
             </nav>
-            <div>
-                <div id="titles" style="text-align: center;">
-                    <hgroup>
-                        <h1>Title h1</h1>
-                        <h2>Title h2</h2>
-                        <h3>Title h3</h3>
-                        <h4>Title h4</h4>
-                        <h5>Title h5</h5>
-                        <h6>Title h6</h6>
-                    </hgroup>
-                    <hgroup>
-                        <h5>Title h5</h5>
-                        <h4>Title h4</h4>
-                        <h3>Title h3</h3>
-                        <h2>Title h2</h2>
-                        <h1>Title h1</h1>
-                    </hgroup>
-                </div>
-                <div>
-                    <details>
-                        <summary>Click for details</summary>
-                        Something small enough to escape casual notice.
-                    </details>
-                </div>
-            </div>
             <div>
                 <p>For Example:<code>fertilize()</code> is the best.</p>
                 <table>
