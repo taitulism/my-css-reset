@@ -11,8 +11,8 @@ let navBar;
 
 const topicElems = {};
 const topicList = [
-    'form',
     'article',
+    'form',
     'list',
     'others',
 ];

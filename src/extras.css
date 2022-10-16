@@ -122,5 +122,18 @@ a, a:active, a:visited {
 fieldset {
     margin: 1em;
     padding: 0.6em 0.75em 0.5em;
-    border: 1px solid gray;
+    border: 2px dotted gray;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+abbr, acronym {
+    border-bottom: .1em dotted;
+    cursor: help;
 }

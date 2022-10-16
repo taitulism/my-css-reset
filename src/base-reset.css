@@ -2,15 +2,20 @@
     box-sizing: border-box;
 }
 
-/* MAYBE */
+/* TODO: */
 html {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     line-height: 1.4;
+    text-rendering: optimizeSpeed;
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, figure, fieldset, blockquote {
@@ -45,12 +50,7 @@ textarea {
     padding: 0.45em;
 }
 
-fieldset {
-    border: 2px dotted gray;
-}
-
-
-/* needs more research */
+/* TODO: */
 input[type=radio] {
     margin: 0;
     vertical-align: text-top;
@@ -58,7 +58,7 @@ input[type=radio] {
     height: 1.1em;
 }
 
-/* needs more research */
+/* TODO: */
 input[type=checkbox] {
     margin: 1px 0 0 1px;
     vertical-align: text-top;
