@@ -33,48 +33,6 @@ nav ul, nav ol {
     margin: 0;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/* ────────/
-│   Text   │
-/──────── */
-h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 0.015rem;
-}
-
-h1 { font-size: 2.1rem; }
-h2 { font-size: 1.7rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.3rem; }
-h5 { font-size: 1.14rem; }
-h6 { font-size: 1.05rem; }
-
-p {
-    margin: 0 0 1em;
-    word-spacing: -0.01em;
-}
-
-mark {
-    padding: 0 0.05em 0.1em
-}
-
-blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    margin: 1em;
-}
-
-blockquote::before {
-    content: '\201C';
-}
-
-blockquote::after {
-    content: '\201D';
-}
-
 code {
     background-color: #e0e0e0;
     padding: 0 3px;
@@ -106,10 +64,6 @@ figure {
     flex-direction: column;
 }
 
-summary {
-    margin-bottom: 0.2em;
-}
-
 /* ───────────────────────────────/
 │   Interactables & Form Fields   │
 /─────────────────────────────── */
@@ -117,12 +71,6 @@ summary {
 /* Define in app */
 a, a:active, a:visited {
     color: #0e0eff;
-}
-
-fieldset {
-    margin: 1em;
-    padding: 0.6em 0.75em 0.5em;
-    border: 2px dotted gray;
 }
 
 sup {
