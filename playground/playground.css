@@ -30,3 +30,68 @@
 .invisible {
     display: none;
 }
+
+/* Flex */
+#flex {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#flex figure {
+    flex: 1 1;
+    box-shadow: 2px 2px 8px gray;
+    padding: 0.5em;
+}
+
+/* the tiny boxes */
+#flex span {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-color: #898989;
+    border: 1px solid #303030;
+}
+
+/* the actual flex containers, rows and columns  */
+.row-triplet div,
+.column-triplet div {
+    background-color: #ddd;    
+}
+
+#flex figcaption {
+    font-size: 1em;
+    margin: 0 0 0.25em;
+    font-family: monospace;
+}
+
+#flex-columns figcaption {
+    text-align: center;
+    width: auto;
+}
+
+#flex-rows {
+    margin-bottom: 50px;
+}
+
+#flex-columns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row-triplet, .column-triplet {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 2em;
+}
+
+.row-triplet div {
+    height: 50px;
+}
+
+.column-triplet div {
+    width: 50px;
+    height: 200px;
+    margin: 0 auto;
+}
