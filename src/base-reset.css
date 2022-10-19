@@ -3,11 +3,6 @@ label, li, main, nav, section, select, span, textarea {
     box-sizing: border-box;
 }
 
-/* TODO: move to looks-ok */
-html {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 html:focus-within {
     scroll-behavior: smooth;
 }
