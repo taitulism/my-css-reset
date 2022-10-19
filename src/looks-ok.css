@@ -8,6 +8,7 @@ body {
 
 button, input, select, textarea {
     border: 1px solid gray;
+    border-radius: 3px;
     color: inherit;
     background-color: inherit;
 }
@@ -56,6 +57,11 @@ h6 { font-size: 1.05rem; }
 p {
     margin-bottom: 1em;
     word-spacing: 0.1em;
+}
+
+figcaption {
+    font-size: 0.85em;
+    font-style: italic;
 }
 
 blockquote::before {
