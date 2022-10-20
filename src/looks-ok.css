@@ -7,6 +7,7 @@ body {
     line-height: 1.4;
 }
 
+/* TODO: font sizes */
 button, input, select, textarea {
     border: 1px solid gray;
     border-radius: 3px;
@@ -14,8 +15,10 @@ button, input, select, textarea {
     background-color: inherit;
 }
 
+/* TODO: <datalist> */
+
 button, input, select {
-    height: 24px;
+    height: 1.75em;
 }
 
 textarea {
@@ -38,6 +41,19 @@ input[type=checkbox] {
 
 fieldset {
     border: 2px dotted gray;
+}
+
+ol, dl {
+    margin-top: 0;
+}
+
+ol {
+    padding: 0;
+    list-style-position: inside;
+}
+
+dd {
+    margin: 0;
 }
 
 /* ────────/
