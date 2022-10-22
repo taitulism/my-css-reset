@@ -18,7 +18,20 @@ button, input, select, textarea {
 /* TODO: <datalist> */
 
 button, input, select {
-    height: 1.75em;
+    height: 1.8em;
+    font-size: 100%;
+}
+
+input {
+    padding-top: 0.25em;
+}
+
+button, input[type=submit], input[type=reset] {
+    padding: 0.2em 0.5em 0;
+}
+
+select {
+    padding-top: 0.1em;
 }
 
 textarea {
