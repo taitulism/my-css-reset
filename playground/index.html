@@ -125,12 +125,11 @@
                 <div id="form-container">
                     <form onsubmit="return false">
                         <div>
-                            <label>Name</label>
-                            <input type="text" />
+                            <label for="name-input">Name</label>
+                            <input id="name-input" type="text" />
                         </div>
                         <div>
-                            <label>Age</label>
-                            <input type="number" />
+                            <label>Age <input type="number" /></label>                            
                         </div>
                         <div>
                             <label>Select Type</label>
@@ -148,13 +147,15 @@
                                     Male
                                 </label>
                                 <br />
-                                <input id="gender-female" type="radio" name="gender" />
-                                <label for="gender-female">Female</label>
+                                <label>
+                                    <input type="radio" name="gender" />
+                                    Female
+                                </label>
                             </fieldset>
                         </div>
                         <div>
                             <input id="sababa" type="checkbox" />
-                            <label for="sababa">Sababa?</label>
+                            <label for="sababa">Sababa</label>
                         </div>
                         <div>
                             <label>

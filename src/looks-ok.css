@@ -39,21 +39,26 @@ textarea {
 }
 
 input[type=radio] {
-    margin: 0;
+    margin: 0 0.25em 0 0;
     vertical-align: text-top;
-    width: 1.1em;
-    height: 1.1em;
+    width: 1em;
+    height: 1em;
 }
 
 input[type=checkbox] {
-    margin: 1px 0 0 1px;
+    margin: 0 0.5em;
     vertical-align: text-top;
-    width: 1.12em;
-    height: 1.12em;
+    width: 1em;
+    height: 1em;
+}
+
+input[type=checkbox]:first-child {
+    margin-left: 0;
 }
 
 fieldset {
-    border: 2px dotted gray;
+    border: 0.15em dotted #808080;
+    margin-bottom: 0.15em;
 }
 
 ol, dl {
