@@ -11,10 +11,10 @@ let navBar;
 
 const topicElems = {};
 const topicList = [
+    'flex',
     'article',
     'list',
     'form',
-    'flex',
     'others',
 ];
 

@@ -1,19 +1,17 @@
-/* TODO: consider the following: */
-/* 	- add .flex | .flex-item | .flex-grow 1 */
-/* 	- add -start */
-/* 	- add full name "column" */
-/* 	- document the concept */
-/* 	- https://developer.mozilla.org/en-US/docs/Web/CSS/place-items */
-
+.flex-item {
+	flex-grow: 1;
+}
 
 /* Flex Row */
-.flex-row {
+.flex-row,
+.flex-row-start {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
 }
 
+.flex-center,
 .flex-row-center {
 	display: flex;
 	flex-direction: row;
@@ -38,7 +36,8 @@
 
 
 /* Flex Column */
-.flex-col {
+.flex-col,
+.flex-col-start {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;

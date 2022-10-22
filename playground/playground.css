@@ -54,7 +54,8 @@
 
 /* the actual flex containers, rows and columns  */
 .row-triplet div,
-.column-triplet div {
+.column-triplet div,
+#flex-misc figure div {
     background-color: #ddd;    
 }
 
@@ -95,3 +96,22 @@
     height: 200px;
     margin: 0 auto;
 }
+
+#flex-misc {
+    margin-bottom: 50px;
+}
+
+#flex-misc .flex-item{
+    text-align: center;
+    background-color: #a1a1a1;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#flex-misc figure div {
+    height: 200px;
+}
+
+#flex-misc-contents {
+    gap: 20px;
+}
+
