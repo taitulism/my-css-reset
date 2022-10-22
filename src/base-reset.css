@@ -16,10 +16,8 @@ body, menu, ul, figure, fieldset {
     margin: 0;
 }
 
-/* TODO: */
 table {
     border-collapse: collapse;
-    border-spacing: 0;
 }
 
 figure img {

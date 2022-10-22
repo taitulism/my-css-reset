@@ -57,7 +57,7 @@ input[type=checkbox]:first-child {
 }
 
 fieldset {
-    border: 0.15em dotted #808080;
+    border: 0.15em dotted gray;
     margin-bottom: 0.15em;
 }
 
@@ -72,6 +72,11 @@ ol {
 
 dd {
     margin: 0;
+}
+
+td, th {
+    border: 1px solid gray;
+    padding-top: 0.25em;
 }
 
 /* ────────/
