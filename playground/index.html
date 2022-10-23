@@ -1,427 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CSS Reset Playground</title>
-    <script>
-        /*! sweet-dom v0.0.1 | MIT License | © Taitu Lizenbaum 2022 | https://github.com/taitulism/sweet-dom.git */
-        const sweetDom=function(e){"use strict";const t={once:!0},n=(e,t,n,r)=>(e.addEventListener(t,n,r),()=>e.removeEventListener(t,n,r)),r=e=>"string"==typeof e?document.querySelector(e):e;return e.$=(e,t=document)=>t.querySelector(e),e.$$=(e,t=document)=>t.querySelectorAll(e),e.bindEvent=n,e.bindEventOnce=(e,r,s,o)=>{const c="boolean"==typeof o?{...t,capture:o}:o?{...o,...t}:t;return n(e,r,s,c)},e.createElm=(e,...t)=>{const{tag:n,id:r,classnames:s}=(e=>{const[t,...n]=e.split("."),[r,s]=t.split("#");return{tag:r||"div",id:s||void 0,classnames:n||void 0}})(e),o=document.createElement(n);return r&&(o.id=r),s?.length&&o.classList.add(...s),t.length&&o.append(...t),o},e.createFrag=(...e)=>{const t=document.createDocumentFragment();return e.length&&t.append(...e),t},e.insert=e=>({before:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n)},after:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n.nextSibling)}}),e.setAttributes=(e,t)=>{for(const[n,r]of Object.entries(t))e.setAttribute(n,r)},e.setStyle=(e,t)=>{Object.assign(e.style,t)},e}({});
-    </script>
-    <script src="./playground.js"></script>
-    <link rel="stylesheet" href="../src/base-reset.css" />
-    <link rel="stylesheet" href="../src/looks-ok.css" />
-    <link rel="stylesheet" href="../src/flex.css" />
-    <!-- <link rel="stylesheet" href="../dist/reset.min.css" /> -->
-    <link rel="stylesheet" href="./playground.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>CSS Reset Playground</title>
+	<script>
+		/*! sweet-dom v0.0.1 | MIT License | © Taitu Lizenbaum 2022 | https://github.com/taitulism/sweet-dom.git */
+		const sweetDom=function(e){"use strict";const t={once:!0},n=(e,t,n,r)=>(e.addEventListener(t,n,r),()=>e.removeEventListener(t,n,r)),r=e=>"string"==typeof e?document.querySelector(e):e;return e.$=(e,t=document)=>t.querySelector(e),e.$$=(e,t=document)=>t.querySelectorAll(e),e.bindEvent=n,e.bindEventOnce=(e,r,s,o)=>{const c="boolean"==typeof o?{...t,capture:o}:o?{...o,...t}:t;return n(e,r,s,c)},e.createElm=(e,...t)=>{const{tag:n,id:r,classnames:s}=(e=>{const[t,...n]=e.split("."),[r,s]=t.split("#");return{tag:r||"div",id:s||void 0,classnames:n||void 0}})(e),o=document.createElement(n);return r&&(o.id=r),s?.length&&o.classList.add(...s),t.length&&o.append(...t),o},e.createFrag=(...e)=>{const t=document.createDocumentFragment();return e.length&&t.append(...e),t},e.insert=e=>({before:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n)},after:t=>{const n=r(t);n?.parentElement?.insertBefore(e,n.nextSibling)}}),e.setAttributes=(e,t)=>{for(const[n,r]of Object.entries(t))e.setAttribute(n,r)},e.setStyle=(e,t)=>{Object.assign(e.style,t)},e}({});
+  </script>
+	<script src="./playground.js"></script>
+	<link rel="stylesheet" href="../src/base-reset.css" />
+	<link rel="stylesheet" href="../src/looks-ok.css" />
+	<link rel="stylesheet" href="../src/flex.css" />
+	<!-- <link rel="stylesheet" href="../dist/reset.min.css" /> -->
+	<link rel="stylesheet" href="./playground.css" />
 </head>
 <body>
-<div id="super-container">
-    <nav id="topic-navigation"></nav>
-    <main id="topic-content">
+	<div id="super-container">
+		<nav id="topic-navigation"></nav>
+		<main id="topic-content">
 
-        <div id="article">
-            <div>
-                <figure>
-                    <img src="./img.jpg" title="img" width="100%" />
-                    <figcaption>An image of.</figcaption>
-                </figure>
-            </div>
-            <div id="text">
-                <h1>Title h1</h1>
-                <p> 
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Curabitur vehicula auctor ex, id ullamcorper tortor.
-                    Donec eu neque a nulla fringilla efficitur sit amet <sub>kg</sub>Hlop<sup>2</sup> eu augue.
-                    Etiam accumsan, <a href="#a">Click, Here</a> neque ut iaculis pharetra, purus felis mollis lorem,
-						  vitae vestibulum velit justo non dolor.
-                    Praesent vel faucibus nibh, non laoreet orci.
-                </p>
-                <p> Curabitur et sapien nisl.
-                    Aliquam ante purus, malesuada ac magna in, accumsan mattis metus.
-                    Morbi commodo <abbr title="HyperText Markup Language">html</abbr> neque et nunc dictum maximus. In feugiat nulla vitae arcu pulvinar sagittis.
-                    Suspendisse tempus consequat feugiat. Suspendisse accumsan imperdiet dignissim
-                </p>
-                <div>
-                    <details>
-                        <summary>Click for details</summary>
-                        Something small enough to escape casual notice.
-                    </details>
-                </div>
-                <p>In mauris erat, pellente istique senectus et netus et malesuada fames ac turpis egestas.
-                    Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus.
-                    Cras ut risus vehicula, placerat nulla ac, feugiat augue. <mark>Mauris</mark> orci augue, consectetur sed nibh eu, ullamcorper auctor urna.
-                    Pellentesque habitant morbi tristique senectus et netus:
-                </p>
-                <blockquote>qwe asd zxc</blockquote>
-                <p> Et malesuada fames ac turpis egestas. Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus. Nunc rutrum at neque euismod laoreet.
-                    Fusce sed faucibus felis. Nunc elementum fringilla <q>lectus quis bibendum</q>. Donec fringilla ut augue et sodales.
-                </p>
+			<div id="article">
+				<div>
+					<figure>
+						<img src="./img.jpg" title="img" width="100%" />
+						<figcaption>An image of.</figcaption>
+					</figure>
+				</div>
+				<div id="text">
+					<h1>Title h1</h1>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Curabitur vehicula auctor ex, id ullamcorper tortor.
+						Donec eu neque a nulla fringilla efficitur sit amet <sub>kg</sub>Hlop<sup>2</sup> eu augue.
+						Etiam accumsan, <a href="#a">Click, Here</a> neque ut iaculis pharetra, purus felis mollis
+						lorem,
+						vitae vestibulum velit justo non dolor.
+						Praesent vel faucibus nibh, non laoreet orci.
+					</p>
+					<p> Curabitur et sapien nisl.
+						Aliquam ante purus, malesuada ac magna in, accumsan mattis metus.
+						Morbi commodo <abbr title="HyperText Markup Language">html</abbr> neque et nunc dictum
+						maximus. In feugiat nulla vitae arcu pulvinar sagittis.
+						Suspendisse tempus consequat feugiat. Suspendisse accumsan imperdiet dignissim
+					</p>
+					<div>
+						<details>
+							<summary>Click for details</summary>
+							Something small enough to escape casual notice.
+						</details>
+					</div>
+					<p>In mauris erat, pellente istique senectus et netus et malesuada fames ac turpis egestas.
+						Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus.
+						Cras ut risus vehicula, placerat nulla ac, feugiat augue. <mark>Mauris</mark> orci augue,
+						consectetur sed nibh eu, ullamcorper auctor urna.
+						Pellentesque habitant morbi tristique senectus et netus:
+					</p>
+					<blockquote>qwe asd zxc</blockquote>
+					<p> Et malesuada fames ac turpis egestas. Vivamus elementum nibh eget enim efficitur dictum
+						aliquam vel tellus. Nunc rutrum at neque euismod laoreet.
+						Fusce sed faucibus felis. Nunc elementum fringilla <q>lectus quis bibendum</q>. Donec
+						fringilla ut augue et sodales.
+					</p>
 
-                <h1>Title h1</h1>
-                <h2>Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus. Nunc rutrum at neque euismod laoree.</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus sit amet ligula eget rutrum. Donec eget nunc a quam feugiat posuere. Nam imperdiet tempus neque, quis lobortis magna elementum nec. Donec in posuere est, in rhoncus nisl. Donec accumsan mi ut ante vestibulum bibendum. Suspendisse quis massa massa. Fusce pharetra porta massa et venenatis. Maecenas ut nunc eu elit consectetur venenatis. Aliquam ac felis dictum, volutpat quam a, euismod nisl. Mauris sit amet nisl ante. Ut tempus, ligula a convallis scelerisque, neque eros consectetur urna, vel condimentum mi purus vel erat. Etiam laoreet, est et dapibus placerat, ante risus sollicitudin urna, vitae imperdiet tellus risus nec dui. Nulla efficitur felis lorem, eget eleifend nisi euismod quis.
-                </p>
-                <p>
-                    Aliquam rhoncus lacus vulputate tristique rhoncus. Vestibulum aliquet id sapien ut bibendum. Maecenas vitae enim id leo consequat semper. Sed a nibh diam. Ut ullamcorper justo nec metus dapibus luctus. Duis pretium ornare porttitor. Ut posuere id ipsum eget tempor. Donec blandit leo aliquet risus blandit molestie. Phasellus magna velit, lobortis at lacinia id, facilisis non velit. In maximus rutrum turpis, eu ultrices libero euismod eu. Sed feugiat non diam quis varius. Nam luctus cursus diam, non ullamcorper sapien condimentum ac. Suspendisse ut cursus sapien.
-                </p>
-                <p>
-                    Morbi lacinia lacus et ex consectetur aliquam. In aliquam augue sit amet velit dapibus, quis gravida lacus iaculis. Proin non sapien sit amet odio fermentum molestie sit amet vel ante. Curabitur orci nulla, commodo in rhoncus nec, semper at ex. In blandit lectus eu libero vestibulum, in venenatis enim consequat. Nulla vestibulum ante quis arcu placerat, eget viverra enim mollis. Ut interdum euismod ligula, vitae sollicitudin orci blandit sit amet. Aliquam ac nisl bibendum, egestas dolor non, tempor odio. Sed commodo, nulla eu aliquet rhoncus, mi libero ornare odio, id dapibus ex turpis a nunc. Vestibulum id sem commodo, pharetra quam eget, venenatis odio.
-                </p>
-                <h2>Title h2</h2>
-                <p>
-                    Mauris nec ipsum tempus, vestibulum elit eget, efficitur nunc. Vestibulum orci lectus, posuere eget bibendum sed, tempus at ante. Donec congue ipsum est. Sed interdum ligula justo, molestie vestibulum nulla vestibulum sit amet. Vivamus accumsan bibendum lectus vitae porttitor. Maecenas ullamcorper dapibus augue, ut convallis erat rutrum eu. Nunc id mattis nulla. Morbi euismod dictum vehicula.
-                </p>
-                <h3>Title h3</h3>
-                <p>
-                    Vivamus molestie turpis in dolor maximus, eu tincidunt mauris sodales. Donec vitae venenatis mi. Aliquam ipsum turpis, euismod sed malesuada id, tincidunt pellentesque risus. Pellentesque consectetur diam et tortor tincidunt, in fringilla ipsum pellentesque. Nam eleifend mauris ut sapien consequat, at eleifend nisi molestie. Duis malesuada dui vitae tellus scelerisque semper. Curabitur vel quam ligula. Curabitur tristique sapien ut elementum malesuada.
-                </p>
-                <h3>Title h3</h3>
-                <p>
-                    Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec enim eget pharetra. Proin maximus felis id odio.
-                </p>
-                <h3>Title h3</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus sit amet ligula eget rutrum. Donec eget nunc a quam feugiat posuere. Nam imperdiet tempus neque, quis lobortis magna elementum nec. Donec in posuere est, in rhoncus nisl. Donec accumsan mi ut ante vestibulum bibendum. Suspendisse quis massa massa. Fusce pharetra porta massa et venenatis. Maecenas ut nunc eu elit consectetur venenatis. Aliquam ac felis dictum, volutpat quam a, euismod nisl. Mauris sit amet nisl ante. Ut tempus, ligula a convallis scelerisque, neque eros consectetur urna, vel condimentum mi purus vel erat. Etiam laoreet, est et dapibus placerat, ante risus sollicitudin urna, vitae imperdiet tellus risus nec dui. Nulla efficitur felis lorem, eget eleifend nisi euismod quis.
-                </p>
-                <h4>Title h4</h4>
-                <p>
-                    Aliquam rhoncus lacus vulputate tristique rhoncus. Vestibulum aliquet id sapien ut bibendum. Maecenas vitae enim id leo consequat semper. Sed a nibh diam. Ut ullamcorper justo nec metus dapibus luctus. Duis pretium ornare porttitor. Ut posuere id ipsum eget tempor. Donec blandit leo aliquet risus blandit molestie. Phasellus magna velit, lobortis at lacinia id, facilisis non velit. In maximus rutrum turpis, eu ultrices libero euismod eu. Sed feugiat non diam quis varius. Nam luctus cursus diam, non ullamcorper sapien condimentum ac. Suspendisse ut cursus sapien.
-                </p>
-                <p>
-                    Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec enim eget pharetra. Proin maximus felis id odio.
-                </p>
-                <p>
-                    Morbi lacinia lacus et ex consectetur aliquam. In aliquam augue sit amet velit dapibus, quis gravida lacus iaculis. Proin non sapien sit amet odio fermentum molestie sit amet vel ante. Curabitur orci nulla, commodo in rhoncus nec, semper at ex. In blandit lectus eu libero vestibulum, in venenatis enim consequat. Nulla vestibulum ante quis arcu placerat, eget viverra enim mollis. Ut interdum euismod ligula, vitae sollicitudin orci blandit sit amet. Aliquam ac nisl bibendum, egestas dolor non, tempor odio. Sed commodo, nulla eu aliquet rhoncus, mi libero ornare odio, id dapibus ex turpis a nunc. Vestibulum id sem commodo, pharetra quam eget, venenatis odio.
-                </p>
-                <h5>Title h5</h5>
-                <p>
-                    Mauris nec ipsum tempus, vestibulum elit eget, efficitur nunc. Vestibulum orci lectus, posuere eget bibendum sed, tempus at ante. Donec congue ipsum est. Sed interdum ligula justo, molestie vestibulum nulla vestibulum sit amet. Vivamus accumsan bibendum lectus vitae porttitor. Maecenas ullamcorper dapibus augue, ut convallis erat rutrum eu. Nunc id mattis nulla. Morbi euismod dictum vehicula.
-                </p>
-                <p>
-                    Vivamus molestie turpis in dolor maximus, eu tincidunt mauris sodales. Donec vitae venenatis mi. Aliquam ipsum turpis, euismod sed malesuada id, tincidunt pellentesque risus. Pellentesque consectetur diam et tortor tincidunt, in fringilla ipsum pellentesque. Nam eleifend mauris ut sapien consequat, at eleifend nisi molestie. Duis malesuada dui vitae tellus scelerisque semper. Curabitur vel quam ligula. Curabitur tristique sapien ut elementum malesuada.
-                </p>
-                <h6>Title h6</h6>
-                <p>
-                    Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec enim eget pharetra. Proin maximus felis id odio.
-                </p>
-            </div>
-            <div id="titles">
-                <hgroup>
-                    <h1>Title h1</h1>
-                    <h2 id="qwe">Title h2</h2>
-                    <h3>Title h3</h3>
-                    <h4>Title h4</h4>
-                    <h5>Title h5</h5>
-                    <h6>Title h6</h6>
-                </hgroup>
-            </div>
-        </div>
-
-
-        <div id="form">
-            <div id="form-inner-wrapper">
-                <div id="form-container">
-                    <form onsubmit="return false">
-                        <div>
-                            <label for="name-input">Name</label>
-                            <input id="name-input" type="text" />
-                        </div>
-                        <div>
-                            <label>Age <input type="number" /></label>                            
-                        </div>
-                        <div>
-                            <label>Select Type</label>
-                            <select name="select">
-                                <option>AAA</option>
-                                <option>BBBBBBBBB</option>
-                                <option>CCCCC</option>
-                            </select>
-                        </div>
-                        <div>
-                            <fieldset>
-                                <legend>Gender</legend>
-                                <label>
-                                    <input type="radio" name="gender" />
-                                    Male
-                                </label>
-                                <br />
-                                <label>
-                                    <input type="radio" name="gender" />
-                                    Female
-                                </label>
-                            </fieldset>
-                        </div>
-                        <div>
-                            <input id="sababa" type="checkbox" />
-                            <label for="sababa">Sababa</label>
-                        </div>
-                        <div>
-                            <label>
-                                Description <br />
-                                <textarea id="description" cols="60" rows="10"></textarea>
-                            </label>
-                        </div>
-                        <div>
-                            <input type="reset" />
-                            <input type="submit" />
-                            <button>Click</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-        <div id="list">
-            <div>
-                <menu>
-                    <li><a href="#">Menu Item 1</a></li>
-                    <li><a href="#">Menu Item 2</a></li>
-                    <li><a href="#">Menu Item 3</a></li>
-                </menu>
-                <div>
-                    DATA List
-                    <dl>
-                        <dt>AAA</dt>
-                        <dd>Etiam accumsan</dd>
-                        <dt>BBBBBBB</dt>
-                        <dd>ommodo neque et nunc </dd>
-                        <dt>CCCC</dt>
-                        <dd>Suspendisse accumsan imperdiet dignissim</dd>
-                    </dl>
-                </div>
-                <div>
-                    UL List
-                    <ul>
-                        <li>AAAAAAA</li>
-                        <li>BBBBBBB</li>
-                        <li>CCCC OL
-                            <ol>
-                                <li>111</li>
-                                <li>222</li>
-                                <li>333</li>
-                            </ol>
-                        </li>
-                        <li>DDDDDDD</li>
-                    </ul>
-                    OL List
-                    <ol>
-                        <li>111</li>
-                        <li>222</li>
-                        <li>333</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-
-        <div id="flex">
-            <section id="flex-rows">
-                <h2>Flex Rows</h2>
-                <h6><code>.flex-row</code> is an alias for <code>.flex-row-start</code></h6><br />
-                <div class="row-triplet">
-                    <figure>
-                        <figcaption>.flex-row-start .align-top</figcaption>
-                        <div class="flex-row-start align-top">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-start</figcaption>
-                        <div class="flex-row-start">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-start .align-bottom</figcaption>
-                        <div class="flex-row-start align-bottom">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="row-triplet">
-                    <figure>
-                        <figcaption>.flex-row-center .align-top</figcaption>
-                        <div class="flex-row-center align-top">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-center</figcaption>
-                        <div class="flex-row-center">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>        
-                    <figure>
-                        <figcaption>.flex-row-center .align-bottom</figcaption>
-                        <div class="flex-row-center align-bottom">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="row-triplet">
-                    <figure>
-                        <figcaption>.flex-row-end .align-top</figcaption>
-                        <div class="flex-row-end align-top">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-end</figcaption>
-                        <div class="flex-row-end">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-end .align-bottom</figcaption>
-                        <div class="flex-row-end align-bottom">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="row-triplet">
-                    <figure>
-                        <figcaption>.flex-row-spread .align-top</figcaption>
-                        <div class="flex-row-spread align-top">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-spread</figcaption>
-                        <div class="flex-row-spread">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-row-spread .align-bottom</figcaption>
-                        <div class="flex-row-spread align-bottom">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-            </section>
+					<h1>Title h1</h1>
+					<h2>Vivamus elementum nibh eget enim efficitur dictum aliquam vel tellus. Nunc rutrum at neque
+						euismod laoree.</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus sit amet ligula
+						eget rutrum. Donec eget nunc a quam feugiat posuere. Nam imperdiet tempus neque, quis
+						lobortis magna elementum nec. Donec in posuere est, in rhoncus nisl. Donec accumsan mi ut
+						ante vestibulum bibendum. Suspendisse quis massa massa. Fusce pharetra porta massa et
+						venenatis. Maecenas ut nunc eu elit consectetur venenatis. Aliquam ac felis dictum, volutpat
+						quam a, euismod nisl. Mauris sit amet nisl ante. Ut tempus, ligula a convallis scelerisque,
+						neque eros consectetur urna, vel condimentum mi purus vel erat. Etiam laoreet, est et
+						dapibus placerat, ante risus sollicitudin urna, vitae imperdiet tellus risus nec dui. Nulla
+						efficitur felis lorem, eget eleifend nisi euismod quis.
+					</p>
+					<p>
+						Aliquam rhoncus lacus vulputate tristique rhoncus. Vestibulum aliquet id sapien ut bibendum.
+						Maecenas vitae enim id leo consequat semper. Sed a nibh diam. Ut ullamcorper justo nec metus
+						dapibus luctus. Duis pretium ornare porttitor. Ut posuere id ipsum eget tempor. Donec
+						blandit leo aliquet risus blandit molestie. Phasellus magna velit, lobortis at lacinia id,
+						facilisis non velit. In maximus rutrum turpis, eu ultrices libero euismod eu. Sed feugiat
+						non diam quis varius. Nam luctus cursus diam, non ullamcorper sapien condimentum ac.
+						Suspendisse ut cursus sapien.
+					</p>
+					<p>
+						Morbi lacinia lacus et ex consectetur aliquam. In aliquam augue sit amet velit dapibus, quis
+						gravida lacus iaculis. Proin non sapien sit amet odio fermentum molestie sit amet vel ante.
+						Curabitur orci nulla, commodo in rhoncus nec, semper at ex. In blandit lectus eu libero
+						vestibulum, in venenatis enim consequat. Nulla vestibulum ante quis arcu placerat, eget
+						viverra enim mollis. Ut interdum euismod ligula, vitae sollicitudin orci blandit sit amet.
+						Aliquam ac nisl bibendum, egestas dolor non, tempor odio. Sed commodo, nulla eu aliquet
+						rhoncus, mi libero ornare odio, id dapibus ex turpis a nunc. Vestibulum id sem commodo,
+						pharetra quam eget, venenatis odio.
+					</p>
+					<h2>Title h2</h2>
+					<p>
+						Mauris nec ipsum tempus, vestibulum elit eget, efficitur nunc. Vestibulum orci lectus,
+						posuere eget bibendum sed, tempus at ante. Donec congue ipsum est. Sed interdum ligula
+						justo, molestie vestibulum nulla vestibulum sit amet. Vivamus accumsan bibendum lectus vitae
+						porttitor. Maecenas ullamcorper dapibus augue, ut convallis erat rutrum eu. Nunc id mattis
+						nulla. Morbi euismod dictum vehicula.
+					</p>
+					<h3>Title h3</h3>
+					<p>
+						Vivamus molestie turpis in dolor maximus, eu tincidunt mauris sodales. Donec vitae venenatis
+						mi. Aliquam ipsum turpis, euismod sed malesuada id, tincidunt pellentesque risus.
+						Pellentesque consectetur diam et tortor tincidunt, in fringilla ipsum pellentesque. Nam
+						eleifend mauris ut sapien consequat, at eleifend nisi molestie. Duis malesuada dui vitae
+						tellus scelerisque semper. Curabitur vel quam ligula. Curabitur tristique sapien ut
+						elementum malesuada.
+					</p>
+					<h3>Title h3</h3>
+					<p>
+						Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl
+						risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis
+						aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum
+						non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet
+						convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec
+						enim eget pharetra. Proin maximus felis id odio.
+					</p>
+					<h3>Title h3</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus sit amet ligula
+						eget rutrum. Donec eget nunc a quam feugiat posuere. Nam imperdiet tempus neque, quis
+						lobortis magna elementum nec. Donec in posuere est, in rhoncus nisl. Donec accumsan mi ut
+						ante vestibulum bibendum. Suspendisse quis massa massa. Fusce pharetra porta massa et
+						venenatis. Maecenas ut nunc eu elit consectetur venenatis. Aliquam ac felis dictum, volutpat
+						quam a, euismod nisl. Mauris sit amet nisl ante. Ut tempus, ligula a convallis scelerisque,
+						neque eros consectetur urna, vel condimentum mi purus vel erat. Etiam laoreet, est et
+						dapibus placerat, ante risus sollicitudin urna, vitae imperdiet tellus risus nec dui. Nulla
+						efficitur felis lorem, eget eleifend nisi euismod quis.
+					</p>
+					<h4>Title h4</h4>
+					<p>
+						Aliquam rhoncus lacus vulputate tristique rhoncus. Vestibulum aliquet id sapien ut bibendum.
+						Maecenas vitae enim id leo consequat semper. Sed a nibh diam. Ut ullamcorper justo nec metus
+						dapibus luctus. Duis pretium ornare porttitor. Ut posuere id ipsum eget tempor. Donec
+						blandit leo aliquet risus blandit molestie. Phasellus magna velit, lobortis at lacinia id,
+						facilisis non velit. In maximus rutrum turpis, eu ultrices libero euismod eu. Sed feugiat
+						non diam quis varius. Nam luctus cursus diam, non ullamcorper sapien condimentum ac.
+						Suspendisse ut cursus sapien.
+					</p>
+					<p>
+						Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl
+						risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis
+						aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum
+						non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet
+						convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec
+						enim eget pharetra. Proin maximus felis id odio.
+					</p>
+					<p>
+						Morbi lacinia lacus et ex consectetur aliquam. In aliquam augue sit amet velit dapibus, quis
+						gravida lacus iaculis. Proin non sapien sit amet odio fermentum molestie sit amet vel ante.
+						Curabitur orci nulla, commodo in rhoncus nec, semper at ex. In blandit lectus eu libero
+						vestibulum, in venenatis enim consequat. Nulla vestibulum ante quis arcu placerat, eget
+						viverra enim mollis. Ut interdum euismod ligula, vitae sollicitudin orci blandit sit amet.
+						Aliquam ac nisl bibendum, egestas dolor non, tempor odio. Sed commodo, nulla eu aliquet
+						rhoncus, mi libero ornare odio, id dapibus ex turpis a nunc. Vestibulum id sem commodo,
+						pharetra quam eget, venenatis odio.
+					</p>
+					<h5>Title h5</h5>
+					<p>
+						Mauris nec ipsum tempus, vestibulum elit eget, efficitur nunc. Vestibulum orci lectus,
+						posuere eget bibendum sed, tempus at ante. Donec congue ipsum est. Sed interdum ligula
+						justo, molestie vestibulum nulla vestibulum sit amet. Vivamus accumsan bibendum lectus vitae
+						porttitor. Maecenas ullamcorper dapibus augue, ut convallis erat rutrum eu. Nunc id mattis
+						nulla. Morbi euismod dictum vehicula.
+					</p>
+					<p>
+						Vivamus molestie turpis in dolor maximus, eu tincidunt mauris sodales. Donec vitae venenatis
+						mi. Aliquam ipsum turpis, euismod sed malesuada id, tincidunt pellentesque risus.
+						Pellentesque consectetur diam et tortor tincidunt, in fringilla ipsum pellentesque. Nam
+						eleifend mauris ut sapien consequat, at eleifend nisi molestie. Duis malesuada dui vitae
+						tellus scelerisque semper. Curabitur vel quam ligula. Curabitur tristique sapien ut
+						elementum malesuada.
+					</p>
+					<h6>Title h6</h6>
+					<p>
+						Proin vitae tempor nisi. Proin ex lacus, fringilla a rhoncus eu, tempus eget est. Donec nisl
+						risus, varius sed lobortis id, pretium in lacus. Mauris sodales, quam vitae venenatis
+						aliquet, nulla purus bibendum libero, sit amet convallis erat tellus quis metus. Vestibulum
+						non leo bibendum, bibendum velit at, mollis tortor. Nunc ultrices tincidunt arcu sit amet
+						convallis. Proin vitae dui tincidunt, placerat velit sed, dictum libero. Duis imperdiet nec
+						enim eget pharetra. Proin maximus felis id odio.
+					</p>
+				</div>
+				<div id="titles">
+					<hgroup>
+						<h1>Title h1</h1>
+						<h2 id="qwe">Title h2</h2>
+						<h3>Title h3</h3>
+						<h4>Title h4</h4>
+						<h5>Title h5</h5>
+						<h6>Title h6</h6>
+					</hgroup>
+				</div>
+			</div>
 
 
-            <section id="flex-columns">
-                <h2>Flex Columns</h2>
-                <h6><code>.flex-col</code> is an alias for <code>.flex-col-start</code></h6><br />
-                <div class="column-triplet">
-                    <figure>
-                        <figcaption>.flex-col-start .align-left</figcaption>
-                        <div class="flex-col-start align-left">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-start</figcaption>
-                        <div class="flex-col-start">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-start .align-right</figcaption>
-                        <div class="flex-col-start align-right">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="column-triplet">
-                    <figure>
-                        <figcaption>.flex-col-center .align-left</figcaption>
-                        <div class="flex-col-center align-left">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-center</figcaption>
-                        <div class="flex-col-center">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-center .align-right</figcaption>
-                        <div class="flex-col-center align-right">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="column-triplet">
-                    <figure>
-                        <figcaption>.flex-col-end .align-left</figcaption>
-                        <div class="flex-col-end align-left">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-end</figcaption>
-                        <div class="flex-col-end">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-end .align-right</figcaption>
-                        <div class="flex-col-end align-right">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-                <div class="column-triplet">
-                    <figure>
-                        <figcaption>.flex-col-spread .align-left</figcaption>
-                        <div class="flex-col-spread align-left">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-spread</figcaption>
-                        <div class="flex-col-spread">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                    <figure>
-                        <figcaption>.flex-col-spread .align-right</figcaption>
-                        <div class="flex-col-spread align-right">
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-            </section>
+			<div id="form">
+				<div id="form-inner-wrapper">
+					<div id="form-container">
+						<form onsubmit="return false">
+							<div>
+								<label for="name-input">Name</label>
+								<input id="name-input" type="text" />
+							</div>
+							<div>
+								<label>Age <input type="number" /></label>
+							</div>
+							<div>
+								<label>Select Type</label>
+								<select name="select">
+									<option>AAA</option>
+									<option>BBBBBBBBB</option>
+									<option>CCCCC</option>
+								</select>
+							</div>
+							<div>
+								<fieldset>
+									<legend>Gender</legend>
+									<label>
+										<input type="radio" name="gender" />
+										Male
+									</label>
+									<br />
+									<label>
+										<input type="radio" name="gender" />
+										Female
+									</label>
+								</fieldset>
+							</div>
+							<div>
+								<input id="sababa" type="checkbox" />
+								<label for="sababa">Sababa</label>
+							</div>
+							<div>
+								<label>
+									Description <br />
+									<textarea id="description" cols="60" rows="10"></textarea>
+								</label>
+							</div>
+							<div>
+								<input type="reset" />
+								<input type="submit" />
+								<button>Click</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 
-            <section id="flex-misc">
-                <h2>Flex Misc.</h2>
-                <div id="flex-misc-contents" class="flex-row">
-                    <figure>
-                        <figcaption>.flex-center</figcaption>
-                        <div class="flex-center">
-                            <span></span>
-                        </div>
-                    </figure>
-                    <br />
-                    <figure>
-                        <figcaption>.flex-item</figcaption>
-                        <div class="flex-row">
-                            <span></span><span></span> <span></span>
-                            <span class="flex-item">.flex-item</span>
-                            <span></span><span></span><span></span>
-                        </div>
-                    </figure>
-                </div>
-            </section>
-        </div>
 
-        <div id="others">
-            <nav>
-                <ul>
-                    <li><a href="#">Abc</a></li>
-                    <li><a href="#">Defghijk</a></li>
-                    <li><a href="#">Lmn opq</a></li>
-                    <li><a href="#">rstuvwxyz</a></li>
-                </ul>
-            </nav>
-            <div>
-<pre><code style="display: block;">function doSomething (num) {
+			<div id="list">
+				<div>
+					<menu>
+						<li><a href="#">Menu Item 1</a></li>
+						<li><a href="#">Menu Item 2</a></li>
+						<li><a href="#">Menu Item 3</a></li>
+					</menu>
+					<div>
+						DATA List
+						<dl>
+							<dt>AAA</dt>
+							<dd>Etiam accumsan</dd>
+							<dt>BBBBBBB</dt>
+							<dd>ommodo neque et nunc </dd>
+							<dt>CCCC</dt>
+							<dd>Suspendisse accumsan imperdiet dignissim</dd>
+						</dl>
+					</div>
+					<div>
+						UL List
+						<ul>
+							<li>AAAAAAA</li>
+							<li>BBBBBBB</li>
+							<li>CCCC OL
+								<ol>
+									<li>111</li>
+									<li>222</li>
+									<li>333</li>
+								</ol>
+							</li>
+							<li>DDDDDDD</li>
+						</ul>
+						OL List
+						<ol>
+							<li>111</li>
+							<li>222</li>
+							<li>333</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div id="flex">
+				<section id="flex-rows">
+					<h2>Flex Rows</h2>
+					<h6><code>.flex-row</code> is an alias for <code>.flex-row-start</code></h6><br />
+					<div class="row-triplet">
+						<figure>
+							<figcaption>.flex-row-start .align-top</figcaption>
+							<div class="flex-row-start align-top">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-start</figcaption>
+							<div class="flex-row-start">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-start .align-bottom</figcaption>
+							<div class="flex-row-start align-bottom">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="row-triplet">
+						<figure>
+							<figcaption>.flex-row-center .align-top</figcaption>
+							<div class="flex-row-center align-top">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-center</figcaption>
+							<div class="flex-row-center">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-center .align-bottom</figcaption>
+							<div class="flex-row-center align-bottom">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="row-triplet">
+						<figure>
+							<figcaption>.flex-row-end .align-top</figcaption>
+							<div class="flex-row-end align-top">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-end</figcaption>
+							<div class="flex-row-end">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-end .align-bottom</figcaption>
+							<div class="flex-row-end align-bottom">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="row-triplet">
+						<figure>
+							<figcaption>.flex-row-spread .align-top</figcaption>
+							<div class="flex-row-spread align-top">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-spread</figcaption>
+							<div class="flex-row-spread">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-row-spread .align-bottom</figcaption>
+							<div class="flex-row-spread align-bottom">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+				</section>
+
+
+				<section id="flex-columns">
+					<h2>Flex Columns</h2>
+					<h6><code>.flex-col</code> is an alias for <code>.flex-col-start</code></h6><br />
+					<div class="column-triplet">
+						<figure>
+							<figcaption>.flex-col-start .align-left</figcaption>
+							<div class="flex-col-start align-left">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-start</figcaption>
+							<div class="flex-col-start">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-start .align-right</figcaption>
+							<div class="flex-col-start align-right">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="column-triplet">
+						<figure>
+							<figcaption>.flex-col-center .align-left</figcaption>
+							<div class="flex-col-center align-left">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-center</figcaption>
+							<div class="flex-col-center">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-center .align-right</figcaption>
+							<div class="flex-col-center align-right">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="column-triplet">
+						<figure>
+							<figcaption>.flex-col-end .align-left</figcaption>
+							<div class="flex-col-end align-left">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-end</figcaption>
+							<div class="flex-col-end">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-end .align-right</figcaption>
+							<div class="flex-col-end align-right">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+					<div class="column-triplet">
+						<figure>
+							<figcaption>.flex-col-spread .align-left</figcaption>
+							<div class="flex-col-spread align-left">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-spread</figcaption>
+							<div class="flex-col-spread">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+						<figure>
+							<figcaption>.flex-col-spread .align-right</figcaption>
+							<div class="flex-col-spread align-right">
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+				</section>
+
+				<section id="flex-misc">
+					<h2>Flex Misc.</h2>
+					<div id="flex-misc-contents" class="flex-row">
+						<figure>
+							<figcaption>.flex-center</figcaption>
+							<div class="flex-center">
+								<span></span>
+							</div>
+						</figure>
+						<br />
+						<figure>
+							<figcaption>.flex-item</figcaption>
+							<div class="flex-row">
+								<span></span><span></span> <span></span>
+								<span class="flex-item">.flex-item</span>
+								<span></span><span></span><span></span>
+							</div>
+						</figure>
+					</div>
+				</section>
+			</div>
+
+			<div id="others">
+				<nav>
+					<ul>
+						<li><a href="#">Abc</a></li>
+						<li><a href="#">Defghijk</a></li>
+						<li><a href="#">Lmn opq</a></li>
+						<li><a href="#">rstuvwxyz</a></li>
+					</ul>
+				</nav>
+				<div>
+					<pre><code style="display: block;">function doSomething (num) {
 	if (num >= 0) {
 		return true;
 	}
@@ -429,49 +510,50 @@
 		return false;
 	}
 }</code></pre>
-            </div>
-            <div>
-                <p>For Example:<code>fertilize()</code> is the best.</p>
-                <table>
-                    <caption>He-Man and Skeletor facts</caption>
-                    <thead>
-                        <tr>
-                            <th>AAA</th>
-                            <th>BBBBB BBB</th>
-                            <th>CCCCCC</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>AA</td>
-                            <td>BBBBBBB</td>
-                            <td>CCCC</td>
-                        </tr>
-                        <tr>
-                            <td>AA</td>
-                            <td>BBBBBBB</td>
-                            <td>CCCC</td>
-                        </tr>
-                        <tr>
-                            <td>AA</td>
-                            <td>BBBBBBB</td>
-                            <td>CCCC</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>AA</td>
-                            <td>BBBBBBB</td>
-                            <td>CCCC</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-            <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to activate the moochillizers.</p>
-        </div>
+				</div>
+				<div>
+					<p>For Example:<code>fertilize()</code> is the best.</p>
+					<table>
+						<caption>He-Man and Skeletor facts</caption>
+						<thead>
+							<tr>
+								<th>AAA</th>
+								<th>BBBBB BBB</th>
+								<th>CCCCCC</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>AA</td>
+								<td>BBBBBBB</td>
+								<td>CCCC</td>
+							</tr>
+							<tr>
+								<td>AA</td>
+								<td>BBBBBBB</td>
+								<td>CCCC</td>
+							</tr>
+							<tr>
+								<td>AA</td>
+								<td>BBBBBBB</td>
+								<td>CCCC</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>AA</td>
+								<td>BBBBBBB</td>
+								<td>CCCC</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to activate the moochillizers.
+				</p>
+			</div>
 
-    </main>
-</div>
-<script> init(); </script>
+		</main>
+	</div>
+	<script> init(); </script>
 </body>
 </html>

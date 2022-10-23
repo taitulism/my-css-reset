@@ -1,110 +1,110 @@
 /* TODO: merge all margin:0 to single selector */
 
 html {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    line-height: 1.4;
+	line-height: 1.4;
 }
 
 
 /* TODO:
 :focus-visible {
 	outline: 0 none;
+	border: 1px solid black;
 	box-shadow: 0px 0px 2px 1px yellow,
-                0px 0px 2px 1px yellow inset; 
-    border: 1px solid black;                
+					0px 0px 2px 1px yellow inset;
 } */
 
 /* TODO: font sizes */
 button, input, select, textarea {
-    border: 1px solid gray;
-    border-radius: 3px;
-    color: inherit;
-    background-color: inherit;
+	border: 1px solid gray;
+	border-radius: 3px;
+	color: inherit;
+	background-color: inherit;
 }
 
 /* TODO: <datalist> */
 
 button, input, select {
-    height: 1.8em;
-    font-size: 100%;
+	height: 1.8em;
+	font-size: 100%;
 }
 
 input {
-    padding-top: 0.25em;
+	padding-top: 0.25em;
 }
 
 button, input[type=submit], input[type=reset] {
-    padding: 0.2em 0.5em 0;
+	padding: 0.2em 0.5em 0;
 }
 
 select {
-    padding-top: 0.1em;
+	padding-top: 0.1em;
 }
 
 textarea {
-    padding: 0.45em;
+	padding: 0.45em;
 }
 
 input[type=radio] {
-    margin: 0 0.25em 0 0;
-    vertical-align: text-top;
-    width: 1em;
-    height: 1em;
+	margin: 0 0.25em 0 0;
+	vertical-align: text-top;
+	width: 1em;
+	height: 1em;
 }
 
 input[type=checkbox] {
-    margin: 0 0.5em;
-    vertical-align: text-top;
-    width: 1em;
-    height: 1em;
+	margin: 0 0.5em;
+	vertical-align: text-top;
+	width: 1em;
+	height: 1em;
 }
 
 input[type=checkbox]:first-child {
-    margin-left: 0;
+	margin-left: 0;
 }
 
 fieldset {
-    border: 0.15em dotted gray;
-    margin-bottom: 0.15em;
+	border: 0.15em dotted gray;
+	margin-bottom: 0.15em;
 }
 
 ol, dl {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 ol {
-    padding: 0;
-    list-style-position: inside;
+	padding: 0;
+	list-style-position: inside;
 }
 
 dd {
-    margin: 0;
+	margin: 0;
 }
 
 td, th {
-    border: 1px solid gray;
-    padding-top: 0.25em;
+	border: 1px solid gray;
+	padding-top: 0.25em;
 }
 
 /* ────────/
 │   Text   │
 /──────── */
 p, h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    letter-spacing: 0.035em;
-    word-spacing: 0.075em;
+	margin: 0;
+	letter-spacing: 0.035em;
+	word-spacing: 0.075em;
 }
 
 p {
-    padding-bottom: 1.25em;
+	padding-bottom: 1.25em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    padding-bottom: 0.2rem;
+	padding-bottom: 0.2rem;
 }
 
 h1 { font-size: 2.75rem; }
@@ -115,78 +115,77 @@ h5 { font-size: 1.3rem; }
 h6 { font-size: 1.1rem; }
 
 figcaption {
-    font-size: 0.85em;
-    font-style: italic;
+	font-size: 0.85em;
+	font-style: italic;
 }
 
 blockquote::before {
-    content: "\201C  ";
-    font-size: 1.25em;
-    vertical-align: middle;
-    font-weight: bold;
+	content: "\201C  ";
+	font-size: 1.25em;
+	vertical-align: middle;
+	font-weight: bold;
 }
 blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    margin: 0;
-    padding: 0 0 1em 1.5rem;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 0;
+	padding: 0 0 1em 1.5rem;
 }
 blockquote::after {
-    content: " \201D";
-    font-size: 1.25em;
-    vertical-align: middle;
-    font-weight: bold;
+	content: " \201D";
+	font-size: 1.25em;
+	vertical-align: middle;
+	font-weight: bold;
 }
 
 q {
-    font-style: italic; 
+	font-style: italic;
 }
 
 details {
-    padding: 0 1em 1em;
+	padding: 0 1em 1em;
 }
 
 details[open] summary {
-    margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 kbd {
-    background-color: #eee;
-    border-radius: 3px;
-    border: 1px solid #b4b4b4;
-    box-shadow: 0 1px 1px #00000033, 0 2px 0 0 #ffffffb3 inset;
-    color: #333;
-    display: inline-block;
-    font-size: .85em;
-    font-weight: bold;
-    line-height: 1;
-    padding: 0.32em 0.4em 0.15em;
-    white-space: nowrap;
-    vertical-align: bottom;
+	background-color: #eee;
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow: 0 1px 1px #00000033, 0 2px 0 0 #ffffffb3 inset;
+	color: #333;
+	display: inline-block;
+	font-size: .85em;
+	font-weight: bold;
+	line-height: 1;
+	padding: 0.32em 0.4em 0.15em;
+	white-space: nowrap;
+	vertical-align: bottom;
 }
 
 code {
-    background-color: #e0e0e0;
-    padding: 2px 4px;/* TODO: use em */
-    font-family: courier, monospace;
-    border-radius: 2px;
+	background-color: #e0e0e0;
+	padding: 2px 4px;/* TODO: use em */
+	font-family: courier, monospace;
+	border-radius: 2px;
 }
 
 pre {
-    margin: 0;
-    tab-size: 3;
+	margin: 0;
+	tab-size: 3;
 }
 
 sub, sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
 }
-
 sub { vertical-align: sub; bottom: 0.1em;}
-sup { vertical-align: super; top: 0.1em;}
+sup {vertical-align: super; top: 0.1em;}
 
 abbr {
-    cursor: help;
-    text-underline-offset: 2px;
+	cursor: help;
+	text-underline-offset: 2px;
 }
