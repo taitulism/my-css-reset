@@ -1,3 +1,5 @@
+/* TODO: merge all margin:0 to single selector */
+
 html {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,6 +8,15 @@ html {
 body {
     line-height: 1.4;
 }
+
+
+/* TODO:
+:focus-visible {
+	outline: 0 none;
+	box-shadow: 0px 0px 2px 1px yellow,
+                0px 0px 2px 1px yellow inset; 
+    border: 1px solid black;                
+} */
 
 /* TODO: font sizes */
 button, input, select, textarea {
@@ -156,7 +167,26 @@ kbd {
 
 code {
     background-color: #e0e0e0;
-    padding: 2px 4px;
+    padding: 2px 4px;/* TODO: use em */
     font-family: courier, monospace;
     border-radius: 2px;
+}
+
+pre {
+    margin: 0;
+    tab-size: 3;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sub { vertical-align: sub; bottom: 0.1em;}
+sup { vertical-align: super; top: 0.1em;}
+
+abbr {
+    cursor: help;
+    text-underline-offset: 2px;
 }
