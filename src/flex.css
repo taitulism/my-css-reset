@@ -2,7 +2,6 @@
 	flex-grow: 1;
 }
 
-/* Flex Row */
 .flex-row,
 .flex-row-start {
 	display: flex;
@@ -35,7 +34,6 @@
 
 
 
-/* Flex Column */
 .flex-col,
 .flex-col-start {
 	display: flex;
