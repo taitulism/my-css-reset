@@ -20,12 +20,6 @@ table {
 	border-collapse: collapse;
 }
 
-/* TODO: */
-figure {
-	display: flex;
-	flex-direction: column;
-}
-/* OR: */
 figure img {
 	display: block;
 }

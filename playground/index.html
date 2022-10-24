@@ -33,15 +33,15 @@
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Curabitur vehicula auctor ex, id ullamcorper tortor.
-						Donec eu neque a nulla fringilla efficitur sit amet <sub>kg</sub>Hlop<sup>2</sup> eu augue.
-						Etiam accumsan, <a href="#a">Click, Here</a> neque ut iaculis pharetra, purus felis mollis
+						Donec eu neque a nulla fringilla efficitur sit amet <sub>kg</sub>Hlop<sup>22</sup> eu augue.
+						Etiam accumsan, <a href="#a">Click Here</a> neque ut iaculis pharetra, purus felis mollis
 						lorem,
 						vitae vestibulum velit justo non dolor.
 						Praesent vel faucibus nibh, non laoreet orci.
 					</p>
 					<p> Curabitur et sapien nisl.
-						Aliquam ante purus, malesuada ac magna in, accumsan mattis metus.
-						Morbi commodo <abbr title="HyperText Markup Language">html</abbr> neque et nunc dictum
+						Aliquam ante purus <dfn ><abbr title="HyperText Markup Language">HTML</abbr></dfn>, malesuada ac magna in, accumsan mattis metus.
+						Morbi commodo neque et nunc dictum
 						maximus. In feugiat nulla vitae arcu pulvinar sagittis.
 						Suspendisse tempus consequat feugiat. Suspendisse accumsan imperdiet dignissim
 					</p>
@@ -214,12 +214,22 @@
 								<label>Age <input type="number" /></label>
 							</div>
 							<div>
-								<label>Select Type</label>
-								<select name="select">
+								<label for="my-select">Select Type</label>
+								<select id="my-select">
 									<option>AAA</option>
 									<option>BBBBBBBBB</option>
 									<option>CCCCC</option>
 								</select>
+							</div>
+							<div>
+								<label for="my-list">Data List:</label>
+								<input id="my-list" list="list-items" name="change-to-uncache-manual-items" />
+								<datalist id="list-items">
+									<option value="1">ABCDEF</option>
+									<option value="2">GHIJKL</option>
+									<option value="3">MNOPQR</option>
+									<option value="4">STUVWX</option>
+								</datalist>
 							</div>
 							<div>
 								<fieldset>
