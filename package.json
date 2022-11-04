@@ -4,7 +4,7 @@
 	"description": "Yet another css reset.",
 	"main": "./dist/reset.min.css",
 	"devDependencies": {
-		"cssnano": "^5.1.13",
+		"cssnano": "^5.1.14",
 		"postcss-cli": "^10.0.0",
 		"postcss-import": "^15.0.0"
 	},
