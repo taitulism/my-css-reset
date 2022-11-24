@@ -14,7 +14,6 @@ const topicList = [
 	'form',
 	'list',
 	'article',
-	'flex',
 	'others',
 ];
 
@@ -45,7 +44,7 @@ function init () {
 
 		// Append to DOM
 		navBar.append(navBtn);
-	}, topicElems);
+	});
 }
 
 function switchTo (wantedTopic) {

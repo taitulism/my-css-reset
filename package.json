@@ -21,7 +21,11 @@
 		"reset",
 		"style"
 	],
-	"author": "",
+	"author": {
+		"name": "Itai Tenenbaum",
+		"email": "taitu.dev@gmail.com",
+		"url": "https://github.com/taitulism"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/taitulism/css-reset/issues"
