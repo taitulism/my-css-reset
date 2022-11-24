@@ -4,7 +4,7 @@ const cssImport = require('postcss-import');
 module.exports = {
 	plugins: [
 		cssImport({
-			from: './src/reset.css',
+			from: './lib/reset.css',
 		}),
 		cssNano({
 			preset: 'default',

@@ -1,34 +1,39 @@
 {
 	"name": "css-reset",
 	"version": "0.0.1",
-	"description": "Yet another css reset.",
+	"license": "MIT",
+	"private": true,
 	"main": "./dist/reset.min.css",
+	"files": [
+		"dist",
+		"lib"
+	],
+	"scripts": {
+		"dev": "postcss lib/index.css --output dist/reset.min.css --watch",
+		"build": "postcss lib/index.css --output dist/reset.min.css",
+		"prebuild": "rm -rf ./dist",
+		"postbuild": "npm run banner",
+		"banner": "node build-utils/add-banner.js ./dist/<pkg-name>.min.css",
+		"version": "npm run build && git add dist",
+		"postversion": "git push && git push --tags"
+	},
 	"devDependencies": {
 		"cssnano": "^5.1.14",
 		"postcss-cli": "^10.0.0",
 		"postcss-import": "^15.0.0"
 	},
-	"scripts": {
-		"dev": "postcss src/index.css --output dist/reset.min.css --watch",
-		"build": "postcss src/index.css --output dist/reset.min.css"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/taitulism/css-reset.git"
-	},
-	"keywords": [
-		"css",
-		"reset",
-		"style"
-	],
+	"homepage": "https://github.com/taitulism/css-reset#readme",
+	"bugs": "https://github.com/taitulism/css-reset/issues",
+	"repository": "github:taitulism/css-reset",
 	"author": {
 		"name": "Itai Tenenbaum",
 		"email": "taitu.dev@gmail.com",
 		"url": "https://github.com/taitulism"
 	},
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/taitulism/css-reset/issues"
-	},
-	"homepage": "https://github.com/taitulism/css-reset#readme"
+	"description": "Yet another css reset.",
+	"keywords": [
+		"css",
+		"reset",
+		"style"
+	]
 }
