@@ -1,5 +1,5 @@
 {
-	"name": "css-reset",
+	"name": "my-css-reset",
 	"version": "0.0.1",
 	"license": "MIT",
 	"private": true,
@@ -22,9 +22,9 @@
 		"postcss-cli": "^10.0.0",
 		"postcss-import": "^15.0.0"
 	},
-	"homepage": "https://github.com/taitulism/css-reset#readme",
-	"bugs": "https://github.com/taitulism/css-reset/issues",
-	"repository": "github:taitulism/css-reset",
+	"homepage": "https://github.com/taitulism/my-css-reset#readme",
+	"bugs": "https://github.com/taitulism/my-css-reset/issues",
+	"repository": "github:taitulism/my-css-reset",
 	"author": {
 		"name": "Itai Tenenbaum",
 		"email": "taitu.dev@gmail.com",

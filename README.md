@@ -1,20 +1,20 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-css-reset
+my-css-reset
 =========
 
 ## Install
 ```sh
-npm install css-reset
+npm install my-css-reset
 ```
 
 ```html
-<link rel="stylesheet" href="node_modules/css-reset/css-reset.min.css" />
+<link rel="stylesheet" href="node_modules/my-css-reset/reset.min.css" />
 ```
 
 or a CDN Link:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/css-reset@latest/dist/reset.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/taitulism/my-css-reset@latest/dist/reset.min.css" />
 ```
 
 
