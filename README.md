@@ -9,7 +9,7 @@ npm install my-css-reset
 ```
 
 ```html
-<link rel="stylesheet" href="node_modules/my-css-reset/reset.min.css" />
+<link rel="stylesheet" href="/node_modules/my-css-reset/reset.min.css" />
 ```
 
 or a CDN Link:
