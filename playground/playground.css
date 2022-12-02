@@ -1,0 +1,35 @@
+#topic-navigation {
+	background-color: #3a3434;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+#form-inner-wrapper {
+	padding: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 600px;
+}
+
+.nav-btn {
+	color: #dadada;
+	font-size: 1.3rem;
+	width: 100px;
+	border: 0 none;
+	border-right: 1px solid gray;
+	border-radius: 0;
+	margin-right: 1px;
+	background-color: inherit;
+}
+
+.nav-btn.selected {
+	color: white;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.invisible {
+	display: none;
+}

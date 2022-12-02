@@ -1,0 +1,36 @@
+{
+	"name": "my-css-reset",
+	"version": "0.0.1",
+	"license": "MIT",
+	"main": "./reset.css",
+	"files": [
+		"reset.min.css",
+		"reset.css"
+	],
+	"scripts": {
+		"dev": "postcss ./reset.css --output reset.min.css --watch",
+		"build": "postcss ./reset.css --output reset.min.css",
+		"postbuild": "npm run banner",
+		"banner": "node build-utils/add-banner.js ./reset.min.css",
+		"version": "npm run build && git add ./reset.min.css",
+		"postversion": "git push && git push --tags"
+	},
+	"devDependencies": {
+		"cssnano": "^5.1.14",
+		"postcss-cli": "^10.1.0"
+	},
+	"homepage": "https://github.com/taitulism/my-css-reset#readme",
+	"bugs": "https://github.com/taitulism/my-css-reset/issues",
+	"repository": "github:taitulism/my-css-reset",
+	"author": {
+		"name": "Itai Tenenbaum",
+		"email": "taitu.dev@gmail.com",
+		"url": "https://github.com/taitulism"
+	},
+	"description": "Yet another css reset.",
+	"keywords": [
+		"css",
+		"reset",
+		"style"
+	]
+}
