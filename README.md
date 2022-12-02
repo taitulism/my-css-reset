@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 my-css-reset
-=========
+============
 
 ## Install
 ```sh
@@ -36,11 +36,3 @@ To work with the minified file, run:
 npm run dev
 ```
 and swap CSS references in the playground HTML
-
-Publish
--------
-Currently there are no tests.
-
-Before publish run the HTML playground to verify everything visually.
-
-> Todo: Tests
