@@ -1,5 +1,5 @@
-article, aside, button, div, fieldset, figure, footer, header, img, input,
-label, li, main, menu, nav, section, select, span, textarea {
+article, aside, div, fieldset, figure, footer, header, img, input,
+label, li, main, menu, nav, section, span, textarea {
 	box-sizing: border-box;
 }
 
