@@ -1,6 +1,6 @@
 const {resolve} = require('path');
 const pkgJson = require('../package.json');
-const generateBanner = require('./generte-banner');
+const generateBanner = require('./generate-banner');
 const prependToFile = require('./prepend-to-file');
 
 const buildFilePath = process.argv[2];
