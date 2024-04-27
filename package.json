@@ -16,8 +16,8 @@
 		"postversion": "git push && git push --tags"
 	},
 	"devDependencies": {
-		"cssnano": "^5.1.14",
-		"postcss-cli": "^10.1.0"
+		"cssnano": "7.0.1",
+		"postcss-cli": "11.0.0"
 	},
 	"homepage": "https://github.com/taitulism/my-css-reset#readme",
 	"bugs": "https://github.com/taitulism/my-css-reset/issues",

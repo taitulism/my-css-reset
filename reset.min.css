@@ -1,2 +1,2 @@
-/*! my-css-reset v0.0.2 | MIT License | © Itai Tenenbaum 2022 | https://github.com/taitulism/my-css-reset */
+/*! my-css-reset v0.0.2 | MIT License | © Itai Tenenbaum 2024 | https://github.com/taitulism/my-css-reset */
 article,aside,div,fieldset,figure,footer,header,img,input,label,li,main,menu,nav,section,span,textarea{box-sizing:border-box}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed}body,fieldset,figure,menu,ul{margin:0}table{border-collapse:collapse}figure img{display:block}menu,ul{list-style-type:none;padding:0}button,input[type=reset],input[type=submit],label:has(input,textarea,select),label[for],select,summary{cursor:pointer}
