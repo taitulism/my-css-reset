@@ -1,7 +1,7 @@
 {
 	"name": "my-css-reset",
 	"description": "Yet another css reset.",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"license": "MIT",
 	"main": "./reset.css",
 	"files": [
