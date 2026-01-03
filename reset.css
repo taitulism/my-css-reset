@@ -1,18 +1,11 @@
-article, aside, div, fieldset, figure, footer, header, img, input,
-label, li, main, menu, nav, section, span, textarea {
-	box-sizing: border-box;
-}
-
-html:focus-within {
-	scroll-behavior: smooth;
-}
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
 
 body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
+	height: 100svh;
 }
 
-body, menu, ul, figure, fieldset {
+body, menu, figure, fieldset, legend, pre, dl, dd {
 	margin: 0;
 }
 
@@ -20,17 +13,36 @@ table {
 	border-collapse: collapse;
 }
 
-figure img {
+img, picture, video, canvas, svg {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
-ul, menu {
-	padding: 0;
-	list-style-type: none;
+ul, menu, [role="list"] {
+  margin: 0;
+  padding: 0;
+  list-style: none inside;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: decimal inside;
+}
+
+button, input, select, textarea {
+	font: inherit;
+	color: inherit;
+
 }
 
 button, select, summary,
-input[type=submit], input[type=reset],
+input[type=checkbox], input[type=radio], input[type=submit], input[type=reset],
 label[for], label:has(input, textarea, select) {
 	cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
 }
