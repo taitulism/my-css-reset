@@ -1,5 +1,6 @@
 {
 	"name": "my-css-reset",
+	"description": "Yet another css reset.",
 	"version": "0.0.4",
 	"license": "MIT",
 	"main": "./reset.css",
@@ -16,8 +17,8 @@
 		"postversion": "git push && git push --tags"
 	},
 	"devDependencies": {
-		"cssnano": "7.0.6",
-		"postcss-cli": "11.0.0"
+		"cssnano": "7.1.2",
+		"postcss-cli": "11.0.1"
 	},
 	"homepage": "https://github.com/taitulism/my-css-reset#readme",
 	"bugs": "https://github.com/taitulism/my-css-reset/issues",
@@ -27,7 +28,6 @@
 		"email": "taitu.dev@gmail.com",
 		"url": "https://github.com/taitulism"
 	},
-	"description": "Yet another css reset.",
 	"keywords": [
 		"css",
 		"reset",
