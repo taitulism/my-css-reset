@@ -1,48 +1,49 @@
-html { box-sizing: border-box; }
-*, *::before, *::after { box-sizing: inherit; }
+@layer reset {
+	html { box-sizing: border-box; }
+	*, *::before, *::after { box-sizing: inherit; }
 
-body {
-	height: 100svh;
-}
+	body {
+		height: 100svh;
+	}
 
-body, menu, figure, fieldset, legend, pre, dl, dd {
-	margin: 0;
-}
+	body, menu, figure, fieldset, legend, pre, dl, dd {
+		margin: 0;
+	}
 
-table {
-	border-collapse: collapse;
-}
+	table {
+		border-collapse: collapse;
+	}
 
-img, picture, video, canvas, svg {
-	display: block;
-	max-width: 100%;
-	height: auto;
-}
+	img, picture, video, canvas, svg {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
 
-ul, menu, [role="list"] {
-  margin: 0;
-  padding: 0;
-  list-style: none inside;
-}
+	ul, menu, [role="list"] {
+		margin: 0;
+		padding: 0;
+		list-style: none inside;
+	}
 
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: decimal inside;
-}
+	ol {
+		margin: 0;
+		padding: 0;
+		list-style: decimal inside;
+	}
 
-button, input, select, textarea {
-	font: inherit;
-	color: inherit;
+	button, input, select, textarea {
+		font: inherit;
+		color: inherit;
+	}
 
-}
+	button, select, summary,
+	input[type=checkbox], input[type=radio], input[type=submit], input[type=reset],
+	label[for], label:has(input, textarea, select) {
+		cursor: pointer;
+	}
 
-button, select, summary,
-input[type=checkbox], input[type=radio], input[type=submit], input[type=reset],
-label[for], label:has(input, textarea, select) {
-	cursor: pointer;
-}
-
-textarea {
-  resize: vertical;
+	textarea {
+		resize: vertical;
+	}
 }
